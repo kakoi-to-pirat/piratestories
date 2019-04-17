@@ -1,0 +1,23 @@
+sudo: false
+
+language: node_js
+node_js:
+  - 10
+
+branches:
+  only:
+    - master
+
+script:
+  - npm run lint
+  - npm test
+
+deploy:
+  provider: heroku
+  app: "piratestories"
+  api_key:
+    secure: "b33bf69d-de73-4f2d-9129-0fa24075da2a"
+
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

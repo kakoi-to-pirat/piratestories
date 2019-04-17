@@ -4,4 +4,3 @@ coverage
 .vscode/
 
 .coveralls.yml
-.travis.yml
