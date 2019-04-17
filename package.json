@@ -1,0 +1,41 @@
+{
+  "name": "piratestories",
+  "version": "1.0.0",
+  "description": "web development blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index",
+    "startdev": "npm install && nodemon -L src/index.js",
+    "lint": "eslint -- .",
+    "lint:fix": "eslint --fix -- ./src",
+    "test": "jest --coverage --collectCoverageFrom=src/**/*js"
+  },
+  "author": "pirate",
+  "license": "ISC",
+  "keywords": [
+    "docker",
+    "nodejs",
+    "piratestories"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "github.com/kakoi-to-pirat/piratestories.git"
+  },
+  "dependencies": {
+    "codecov.io": "^0.1.6",
+    "coveralls": "^3.0.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.4.0",
+    "nodemon": "^1.14.12",
+    "prettier": "^1.15.3",
+    "supertest": "^4.0.0"
+  }
+}
