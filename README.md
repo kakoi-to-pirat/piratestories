@@ -1,4 +1,4 @@
-# Pirate Stories _DEV
+# Pirate Stories
 
 docker-compose up
 
