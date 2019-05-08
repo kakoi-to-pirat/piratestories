@@ -1,6 +1,6 @@
 const request = require('supertest');
-const createApp = require('../src/app');
 const fs = require('fs');
+const createApp = require('../src/app');
 
 let app;
 beforeAll(async () => {
