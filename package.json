@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/index",
     "startdev": "npm install && nodemon -L src/index.js",
+    "startdev-debug": "nodemon --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "eslint -- .",
     "lint:fix": "eslint --fix -- ./src",
     "test": "jest --coverage --collectCoverageFrom=src/**/*js"
