@@ -23,7 +23,6 @@
     "url": "github.com/kakoi-to-pirat/piratestories.git"
   },
   "dependencies": {
-    "bcrypt": "^3.0.6",
     "codecov.io": "^0.1.6",
     "coveralls": "^3.0.3",
     "dotenv": "^7.0.0",
