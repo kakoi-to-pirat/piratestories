@@ -18,7 +18,7 @@ describe('Integration tests', () => {
 
   test('It should response the GET admin method', async () => {
     const response = await request(app).get('/admin');
-    const fileContent = fs.readFileSync('./src/admin/index.html', 'utf8');
+    const fileContent = fs.readFileSync('./src/auth/login.html', 'utf8');
 
     expect(response.status).toBe(200);
     expect(response.text).toEqual(fileContent);

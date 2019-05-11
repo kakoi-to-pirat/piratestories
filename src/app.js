@@ -1,12 +1,24 @@
-const app = require('express')();
+const express = require('express');
+const session = require('./auth/session');
+const passport = require('./auth/passport');
+const auth = require('./auth/auth');
+const authRouter = require('./auth/routes');
+
+const app = express();
 
 const createApp = async () => {
+
+  app.use(express.urlencoded({ extended: false }));
+  app.use(session);
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use('/', authRouter);
 
   app.get('/', (req, res) => {
     res.status(200).sendFile('client/index.html', {root: __dirname});
   });
 
-  app.get('/admin', (req, res) => {
+  app.get('/admin', auth, (req, res) => {
     res.status(200).sendFile('admin/index.html', {root: __dirname});
   });
 
