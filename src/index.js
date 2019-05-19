@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const createApp = require('./app');
 
-const PORT = process.env.PORT || process.env.LOCAL_INPUT_PORT;
+const PORT = process.env.PORT || process.env.PORT;
 
 createApp()
   .then(app => {
