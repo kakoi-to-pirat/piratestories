@@ -7,7 +7,6 @@ const authRouter = require('./auth/routes');
 const app = express();
 
 const createApp = async () => {
-
   app.use(express.urlencoded({ extended: false }));
   app.use(session);
   app.use(passport.initialize());
@@ -15,11 +14,11 @@ const createApp = async () => {
   app.use('/', authRouter);
 
   app.get('/', (req, res) => {
-    res.status(200).sendFile('client/index.html', {root: __dirname});
+    res.status(200).sendFile('client/index.html', { root: __dirname });
   });
 
   app.get('/admin', auth, (req, res) => {
-    res.status(200).sendFile('admin/index.html', {root: __dirname});
+    res.status(200).sendFile('/admin/index.html', { root: __dirname });
   });
 
   app.use((req, res) => {
