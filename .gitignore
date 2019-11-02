@@ -35,6 +35,7 @@ lerna-debug.log*
 
 sessions
 pgdata
+pgadmin
 
 .coveralls.yml
 .env
