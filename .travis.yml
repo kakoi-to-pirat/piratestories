@@ -17,6 +17,8 @@ deploy:
   app: "piratestories"
   api_key:
     secure: "b33bf69d-de73-4f2d-9129-0fa24075da2a"
+  run:
+    npm run migration:run
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
